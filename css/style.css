@@ -1,0 +1,406 @@
+:root {
+  --main-color: #1a1f36;    
+  --primary-color: #4fc3f7;    
+  --secondary-color: #f5f5f5;  
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Raleway", sans-serif;
+  color: var(--secondary-color);
+  line-height: 1.7em;
+  background-color: var(--main-color);
+}
+
+hr {
+  border: 0.5px solid var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 30px;
+}
+
+.section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  position: relative;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.title:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: var(--main-color);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.navbar span {
+  color: var(--primary-color);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  background: var(--primary-color);
+  color: var(--main-color);
+}
+
+.nav-menu li a.current {
+  color: var(--primary-color);
+  
+}
+.nav-menu li a.current:hover {
+  color: var(--secondary-color);
+  
+}
+
+.banner-header {
+  height: 70vh;
+  width: 100%;
+  background:
+    linear-gradient(rgba(29, 38, 113, 0.6), rgba(29, 38, 113, 0.6)),
+    url("../img/developer.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-header-text {
+  text-align: center;
+  max-width: 700px;
+}
+
+.banner-title {
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+
+.banner-title span {
+  color: var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  margin-top: 15px;
+  border-radius: 20px;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+/* Portfolio */
+.card-projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card img {
+  width: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 15px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover img {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+}
+
+.portfolio h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Hire Me */
+.hireme {
+  text-align: center;
+}
+
+.hireme p {
+  padding-bottom: 10px;
+}
+
+/* Footer */
+.main-footer {
+  height: 80px;
+  display: flex;
+  background: var(--main-color);
+  align-items: center;
+}
+
+.main-footer .container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer-social li i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.footer-social li a:hover i {
+  color: var(--secondary-color);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas → dos filas si tienes 6 skills */
+  gap: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+
+.skill i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.skill h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 1s ease-in-out;
+}
+
+.progress.html { width: 95%; background: #e34c26; }
+.progress.css { width: 90%; background: #264de4; }
+.progress.js { width: 85%; background: #f7df1e; }
+.progress.react { width: 80%; background: #61dafb; }
+.progress.node { width: 75%; background: #68a063; }
+.progress.seo { width: 70%; background: #00bcd4; }
+
+/* Form & Map */
+.form-map {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.form-map iframe {
+  height: 100%;
+  min-height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+/* Contact Form */
+.box-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.box-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.input-form {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+.input-form:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+.box-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.box-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  color: var(--main-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box-form button:hover {
+  background: var(--secondary-color);
+  color: var(--main-color);
+}
+
+.contact-container {
+  max-width: 1100px;   
+  margin: 0 auto;      
+  padding: 40px 20px;  
+}
+
+.form-map {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: start;
+  max-width: 1000px;   
+}
+
+.form-map iframe {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+
+.box-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card-info {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
+}
+
