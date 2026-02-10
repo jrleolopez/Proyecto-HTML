@@ -1,0 +1,142 @@
+/* Responsive */
+@media (max-width: 1024px) {
+  .banner-title {
+    font-size: 2.5em;
+  }
+
+  .card-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-menu li a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Banner */
+  .banner-header {
+    padding-top: 150px;
+  }
+
+  .banner-header-text {
+    width: 80%;
+  }
+
+  .banner-title {
+    font-size: 2em;
+  }
+
+  /* Portfolio */
+  .portfolio .portfolio-nav {
+    display: none;
+  }
+
+  .card-projects {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Contact */
+  .form-map,
+  .card-info {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .single-project .description h4 {
+    font-size: 1em;
+  }
+
+  .single-project-info {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .single-project-details {
+    text-align: center;
+  }
+
+  /* About - Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .skill i {
+    font-size: 2rem;
+  }
+
+  .skill h3 {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .main-footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .main-footer .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Banner */
+  .banner-title {
+    font-size: 1.6em;
+  }
+
+  .banner-header-text {
+    width: 90%;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill {
+    margin-bottom: 20px;
+  }
+
+  .skill i {
+    font-size: 1.8rem;
+  }
+
+  .skill h3 {
+    font-size: 0.95rem;
+  }
+
+  /* Portfolio */
+  .card-projects {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-social {
+    justify-content: center;
+  }
+}
